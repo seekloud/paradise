@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+  ~ Copyright 2018 seekloud (https://github.com/seekloud)
+  ~
+  ~    Licensed under the Apache License, Version 2.0 (the "License");
+  ~    you may not use this file except in compliance with the License.
+  ~    You may obtain a copy of the License at
+  ~
+  ~        http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~    Unless required by applicable law or agreed to in writing, software
+  ~    distributed under the License is distributed on an "AS IS" BASIS,
+  ~    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~    See the License for the specific language governing permissions and
+  ~    limitations under the License.
+  -->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paradise</title>
+  <style>
+    body{
+      margin:0;
+    }
+    .none{
+      display:none;
+    }
+      #offCanvas{
+        display: none;
+      }
+      #backCanvas{
+          z-index:1;
+          position:absolute;
+      }
+      #GameView{
+          position: absolute;
+          z-index:2;
+      }
+      #TopView{
+        position: absolute;
+        z-index: 4;
+      }
+  </style>
+</head>
+<body>
+
+  <div>
+    <canvas id="offCanvas" tabindex="1" ></canvas>
+
+    <canvas id="backCanvas" tabindex="2" ></canvas>
+
+    <canvas id="GameView" tabindex="3" style="cursor: url(/paradise/static/img/frog.png),auto;" ></canvas>
+  </div>
+
+
+  <!--<canvas id="frontCanvas" tabindex="4" ></canvas>-->
+
+
+  <div id="playground"></div>
+  <img class="none" id="grass" src ="/paradise/static/img/background.png" />
+  <img class="none" id="bk1" src ="/paradise/static/img/background4.png" />
+  <img class="none" id="bk2" src ="/paradise/static/img/background2.png" />
+  <img class="none" id="snakeHead" src ="/paradise/static/img/snake.png" />
+  <audio id="music" src="/paradise/static/img/bk.mp3" loop="loop" preload="auto" ></audio>
+  <audio id="victory" src="/paradise/static/img/victory.mp3" preload="auto"></audio>
+  <audio id="end" src="/paradise/static/img/end.mp3" preload="auto"></audio>
+
+  <!--<script type="text/javascript" src="/paradise/static/sjsout/frontend-opt.js"></script>-->
+  <script type="text/javascript" src="/paradise/static/jsFile/frontend-opt/2019_01_22"></script>
+  <!--<script type="text/javascript" src="/paradise/frontend-launcher.js"></script>-->
+  <!--http://d.datouwang.com/uploads/file/yinxiao/2016/yinxiao197.mp3-->
+
+</body>
+</html>
